@@ -2,15 +2,15 @@
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
         "type": "auto",
+		"source": "macos",
         "height": 15,
-        "width": 30,
+        "width": 15,
         "padding": {
             "top": 3,
             "left": 3
         }
 		// "color": {
-		// 	"1": "green",
-		// 	"2": "blue"
+		// 	"1": "white"
 		// }
     },
     "modules": [
@@ -21,7 +21,7 @@
         {
             "type": "host",
             "key": " PC",
-			"format": "{sku} {family}{name}",
+			"format": "{name}",
             "keyColor": "red"
         },
 		"break",
@@ -37,16 +37,9 @@
             "keyColor": "yellow"
         },
 		{
-			"type": "command",
-			"key": " iGPU",
-			"keyColor": "yellow",
-			"text": "lspci | grep -i vga | head -n1 | sed -E 's/^.*VGA compatible controller: //; s/ \\(rev .*\\)//; s/ Corporation//'"
-		},
-		{
-			"type": "command",
-			"key": " dGPU",
-			"keyColor": "yellow",
-			"text": "lspci | grep -i '3d controller' | head -n1 | sed -E 's/^.*3D controller: //; s/ \\(rev .*\\)//; s/ Corporation//'"
+			"type": "gpu",
+			"key": " GPU",
+			"keyColor": "yellow"
 		},
         {
             "type": "memory",
