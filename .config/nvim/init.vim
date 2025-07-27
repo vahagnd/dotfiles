@@ -61,9 +61,9 @@ Plug 'norcalli/nvim-colorizer.lua'
 
 call plug#end()
 
-" comment using ctrl+/ setup
-nmap <silent> <C-_> <Plug>(comment_toggle_linewise)
-xmap <silent> <C-_> <Plug>(comment_toggle_linewise_visual)
+" comment using Option + / setup
+nmap <silent> ÷ :<Plug>(comment_toggle_linewise)
+xmap <silent> ÷ :<Plug>(comment_toggle_linewise_visual)
 
 
 " python colorscheme
@@ -101,11 +101,11 @@ require('nvim-autopairs').setup{}
 -- commenting setup
 require('Comment').setup({
   toggler = {
-    line = '<C-_>',    -- your Ctrl+/ mapping for line comments
+    line = '÷',    -- your Option + / mapping for line comments
     block = nil,       -- disable block comment toggler completely
   },
   opleader = {
-    line = '<C-_>',    -- line comment operator for visual mode
+    line = '÷',    -- line comment operator for visual mode
     block = nil,       -- disable block comment operator
   },
   pre_hook = nil,      -- no pre-hook needed
