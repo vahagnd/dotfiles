@@ -2,8 +2,8 @@
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
         "type": "auto",
-		"source": "macos",
-        "height": 15,
+		// "source": "macos",
+        "height": 25,
         "width": 15,
         "padding": {
             "top": 3,
@@ -28,6 +28,7 @@
 		{
 			"type": "display",
 			"key": " Display ({name})",
+			"format": "{width}x{height} @ {refresh-rate} Hz ({scaled-width}x{scaled-height}) {inch}\"",
 			"keyColor": "green"
 		},
 		"break",

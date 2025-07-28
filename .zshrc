@@ -26,7 +26,7 @@ alias la='ls -A'
 alias l='ls -CF'
 alias lh='ls -d .*'
 
-# alias icat='kitty +kitten icat'
+alias icat='kitty +kitten icat'
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
