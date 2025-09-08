@@ -228,13 +228,13 @@ keys = [
     Key([MOD], "Tab", lazy.next_layout()),
 
     # Other window controls
-    Key([MOD], "w", lazy.window.kill()),
+    Key([MOD], "q", lazy.window.kill()),
     Key([MOD], "f", lazy.window.toggle_fullscreen()),
     Key([MOD], "t", lazy.window.toggle_floating()),
     
     # Qtile controls
-    Key([MOD, CTRL], "r", lazy.reload_config()),
-    Key([MOD, CTRL], "q", lazy.shutdown()),
+    Key([MOD, CTRL, SHIFT], "r", lazy.reload_config()),
+    Key([MOD, CTRL, SHIFT], "q", lazy.shutdown()),
     Key([MOD], "r", lazy.spawncmd()),
 
     # Volume control (alsamixer)
