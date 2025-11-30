@@ -2,6 +2,7 @@
 [[ $- != *i* ]] && return
 
 export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
 
 # History settings
 HISTSIZE=1000
@@ -12,9 +13,6 @@ setopt hist_ignore_space
 
 # lesspipe (check if works or comment out)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-# Colored prompt
-PS1='%F{green}%n@%m%f:%F{blue}%~%f$ '
 
 ## source env
 # . "$HOME/.local/bin/env"
@@ -32,5 +30,19 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-# alias kitty="XCURSOR_SIZE=16 kitty"
+alias ubuntu='docker start ubuntu1 && docker exec -it --user vahagn ubuntu1 bash -c "cd && exec bash"'
+
+alias gs='git status'
+
+# Prompt
+setopt prompt_subst
+
+git_branch() {
+    branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+    if [ -n "$branch" ]; then
+        echo " (%F{yellow}$branch%f)"
+    fi
+}
+
+PS1='%F{green}%n@%m%f:%F{blue}%~%f$(git_branch)$ '
 
