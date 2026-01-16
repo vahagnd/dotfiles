@@ -3,6 +3,9 @@
 
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+export PYTHONPATH="$HOME/Projects/spotify-helper"
 
 # History settings
 HISTSIZE=1000
@@ -16,6 +19,8 @@ setopt hist_ignore_space
 
 ## source env
 # . "$HOME/.local/bin/env"
+
+eval "$(direnv hook zsh)"
 
 # Aliases
 alias ls='ls -G'
@@ -46,3 +51,7 @@ git_branch() {
 
 PS1='%F{green}%n@%m%f:%F{blue}%~%f$(git_branch)$ '
 
+# Autocompletion
+fpath+=~/.zfunc; autoload -Uz compinit; compinit
+
+zstyle ':completion:*' menu select
