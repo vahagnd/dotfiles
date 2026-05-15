@@ -1,3 +1,5 @@
 [user]
-	email = vahagndovlatyan03@gmail.com
-	name = vahagnd
+	email = vahagn.dovlatyan@waveaccess.global
+	name = vahagndovlatyan
+[core]
+	editor = nvim

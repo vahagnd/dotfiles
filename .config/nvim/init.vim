@@ -8,6 +8,7 @@ set mouse=a
 set spell
 set spelllang=en
 set termguicolors
+set clipboard+=unnamedplus
 
 " word autocorrection setup
 xnoremap <leader>s :<C-u>call SpellCorrectVisual()<CR>
@@ -71,7 +72,7 @@ colorscheme gruvbox
 
 lua << EOF
 -- python lsp setup
-require('lspconfig').pyright.setup{}
+-- require('lspconfig').pyright.setup{}
 
 -- autocomplete setup
 local cmp = require('cmp')
